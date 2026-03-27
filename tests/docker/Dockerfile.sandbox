@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+# 데이터 분석 패키지 설치
+RUN python -m pip install --no-cache-dir \
+    pandas \
+    numpy \
+    matplotlib \
+    seaborn
+
+# 오피스 문서 생성 패키지 설치 (Excel, Word, PowerPoint)
+RUN python -m pip install --no-cache-dir \
+    openpyxl \
+    python-docx \
+    python-pptx
+
+WORKDIR /workspace
+

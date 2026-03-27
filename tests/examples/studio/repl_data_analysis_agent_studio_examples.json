@@ -1,0 +1,134 @@
+{
+  "examples": [
+    {
+      "name": "방법 1: Messages로 입력 (권장)",
+      "description": "MessagesState를 사용하므로 messages 필드에 HumanMessage 추가",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv 파일을 분석하고 기본 통계 정보를 출력하세요"
+          }
+        ]
+      }
+    },
+    {
+      "name": "방법 2: State 필드 직접 입력",
+      "description": "query와 data_file_paths 필드를 직접 설정",
+      "input": {
+        "query": "CSV 파일의 기본 통계 정보를 보여주세요",
+        "data_file_paths": ["data/test_planning.csv"],
+        "max_iterations": 3,
+        "iteration_count": 0,
+        "should_retry": false
+      }
+    },
+    {
+      "name": "기본 통계 분석",
+      "description": "CSV 파일의 기본 통계 정보 추출",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv 파일을 읽고 데이터의 행 수, 컬럼 정보, 기본 통계를 출력하세요"
+          }
+        ]
+      }
+    },
+    {
+      "name": "카테고리별 집계 분석",
+      "description": "카테고리별 평균 가격과 총 판매량 계산",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv 파일에서 각 카테고리(category)별로 평균 가격(price)과 총 판매량(sales)을 계산하세요"
+          }
+        ]
+      }
+    },
+    {
+      "name": "시각화 포함 분석",
+      "description": "데이터 시각화 코드 생성 및 실행",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv 파일을 분석하고 가격과 판매량의 관계를 산점도로 시각화하세요"
+          }
+        ]
+      }
+    },
+    {
+      "name": "필터링 및 정렬",
+      "description": "조건에 맞는 데이터 필터링",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv에서 가격이 20 이상인 상품만 필터링하고 판매량 기준으로 내림차순 정렬하여 상위 5개를 출력하세요"
+          }
+        ]
+      }
+    },
+    {
+      "name": "상관관계 분석",
+      "description": "컬럼 간 상관관계 분석",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv에서 가격(price)과 판매량(sales)의 상관관계를 분석하고 결과를 출력하세요"
+          }
+        ]
+      }
+    },
+    {
+      "name": "종합 분석",
+      "description": "여러 분석을 종합적으로 수행",
+      "input": {
+        "messages": [
+          {
+            "role": "user",
+            "content": "data/test_planning.csv 파일을 종합적으로 분석하세요. 기본 통계, 카테고리별 집계, 시각화를 모두 포함하세요"
+          }
+        ]
+      }
+    }
+  ],
+  "usage_guide": {
+    "step1": "LangGraph Studio 실행: langgraph dev",
+    "step2": "브라우저에서 repl_data_analysis_agent 선택",
+    "step3": "입력 방법 선택:",
+    "   방법 A: messages 필드에 위 예시 중 하나를 JSON 형식으로 붙여넣기",
+    "   방법 B: State 필드를 직접 채우기 (query, data_file_paths 등)",
+    "step4": "Run 버튼 클릭하여 실행",
+    "step5": "각 노드의 실행 결과 확인:",
+    "   - read_data_metadata: 데이터 메타데이터 읽기",
+    "   - generate_code: 코드 생성",
+    "   - execute_in_repl: REPL에서 코드 실행",
+    "   - validate_result: 결과 검증",
+    "   - generate_insights: 인사이트 추출",
+    "step6": "final_result 필드에서 최종 결과 확인"
+  },
+  "tips": {
+    "tip1": "파일 경로는 프로젝트 루트 기준 상대 경로 또는 절대 경로 사용 가능",
+    "tip2": "data/ 디렉토리에 있는 파일은 'data/파일명.csv' 형식으로 지정",
+    "tip3": "messages에 파일 경로를 포함하면 자동으로 추출됩니다",
+    "tip4": "반복 루프가 동작하는지 확인하려면 max_iterations를 낮게 설정 (예: 2)",
+    "tip5": "repl_session_id가 생성되어 세션 상태가 유지되는지 확인"
+  },
+  "file_locations": {
+    "test_data": "data/test_planning.csv",
+    "example_paths": [
+      "data/test_planning.csv",
+      "/home/doyamoon/agentic_ai/data/test_planning.csv"
+    ]
+  }
+}
+
+
+
+
+
+

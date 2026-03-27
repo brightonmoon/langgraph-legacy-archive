@@ -1,0 +1,21 @@
+{
+  "dependencies": [
+    "."
+  ],
+  "graphs": {
+    "main_agent": "src.agents.agent:agent",
+    "report_generation_agent": "src.agents.sub_agents.report_generation_agent.agent:agent",
+    "csv_data_analysis_agent": "src.agents.sub_agents.csv_data_analysis_agent.agent:agent",
+    "parallel_search_agent": "src.agents.sub_agents.parallel_search_agent.agent:agent",
+    "code_generation_agent": "src.agents.sub_agents.code_generation_agent.agent:agent",
+    "deepagent": "./deepagent/agent.py:agent",
+    "repl_data_analysis_agent": "src.agents.sub_agents.repl_data_analysis_agent.agent:agent",
+    "rag_agent": "src.agents.sub_agents.rag_agent.agent:agent",
+    "simple_csv_agent": "src.agents.sub_agents.simple_csv_agent.agent:agent"
+  },
+  "env": ".env",
+  "python_version": "3.11",
+  "dockerfile_lines": [
+    "RUN apt-get update && apt-get install -y curl"
+  ]
+}

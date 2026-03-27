@@ -1,0 +1,25 @@
+{
+  "servers": {
+
+   "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "enabled": true,
+      "transport": "stdio",
+      "env": {}
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "enabled": true,
+      "transport": "stdio",
+      "env": {}
+    } 
+  }
+}

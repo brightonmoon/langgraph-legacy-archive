@@ -1,0 +1,78 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Sensitive credentials and tokens
+token.json
+credentials.json
+*.pem
+
+# Logs
+data/logs/
+*.log
+
+# Session data
+data/sessions/
+sessions/
+
+# Cache
+data/cache/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Workspace (Phase 1: 파일 기반 워크플로우)
+workspace/
+
+# Data directory (CSV 파일 등 분석 데이터)
+# 주의: 실제 데이터 파일은 버전 관리에 포함할 수 있음
+# data/*.csv
+# data/*.xlsx
+
+# LangGraph runtime data
+.langgraph_api/
+
+# RAG vector stores
+.rag_vectorstores/
+
+# IDE - Cursor
+.cursor/
+
+# IDE - Other
+.omc/
+
+# Runtime output files
+*.pid
+*.status.json
+
+# CSV data files (임시 분석 데이터)
+*.csv

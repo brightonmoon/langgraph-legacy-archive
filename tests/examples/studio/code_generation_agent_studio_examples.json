@@ -1,0 +1,74 @@
+{
+  "examples": [
+    {
+      "name": "기본 계산기 함수 생성",
+      "description": "간단한 계산기 함수 만들기",
+      "input": {
+        "task_description": "간단한 계산기 함수 만들기",
+        "requirements": "덧셈, 뺄셈, 곱셈, 나눗셈 함수 생성",
+        "context": {
+          "domain": "general"
+        },
+        "target_filepath": "tests/test_output/test_calculator.py"
+      }
+    },
+    {
+      "name": "CSV 분석 코드 생성",
+      "description": "CSV 파일 분석을 위한 코드 생성",
+      "input": {
+        "task_description": "CSV 파일을 읽고 기본 통계를 출력하는 코드 생성",
+        "requirements": "pandas를 사용하여 CSV 파일을 읽고, 기본 통계 정보를 출력",
+        "context": {
+          "domain": "csv_analysis",
+          "csv_file_path": "/home/doyamoon/agentic_ai/tests/DESeq2_counts.csv"
+        },
+        "target_filepath": "tests/test_output/test_csv_analysis.py"
+      }
+    },
+    {
+      "name": "웹 개발 - Flask API 생성",
+      "description": "Flask를 사용한 간단한 REST API 생성",
+      "input": {
+        "task_description": "Flask를 사용하여 간단한 REST API 서버 만들기",
+        "requirements": "GET /hello 엔드포인트와 GET /users 엔드포인트 생성",
+        "context": {
+          "domain": "web_development"
+        },
+        "target_filepath": "tests/test_output/test_flask_api.py"
+      }
+    },
+    {
+      "name": "데이터 처리 - 리스트 필터링",
+      "description": "리스트 데이터 처리 함수 생성",
+      "input": {
+        "task_description": "숫자 리스트에서 짝수만 필터링하는 함수 생성",
+        "requirements": "리스트를 입력받아 짝수만 반환하는 함수 작성",
+        "context": {
+          "domain": "data_processing"
+        },
+        "target_filepath": "tests/test_output/test_filter.py"
+      }
+    },
+    {
+      "name": "Planning Tool 사용 예시",
+      "description": "Planning Tool을 활용한 복잡한 작업 분해",
+      "input": {
+        "task_description": "웹 스크래퍼 만들기",
+        "requirements": "웹 페이지를 스크래핑하고, 데이터를 CSV로 저장하는 프로그램",
+        "context": {
+          "domain": "web_development"
+        },
+        "target_filepath": "tests/test_output/test_web_scraper.py"
+      }
+    }
+  ],
+  "usage_guide": {
+    "step1": "LangGraph Studio 실행: langgraph dev",
+    "step2": "브라우저에서 code_generation_agent 선택",
+    "step3": "위 예시 중 하나를 입력 필드에 JSON 형식으로 붙여넣기",
+    "step4": "Run 버튼 클릭하여 실행",
+    "step5": "생성된 코드 확인 및 파일 저장 확인"
+  }
+}
+
+
